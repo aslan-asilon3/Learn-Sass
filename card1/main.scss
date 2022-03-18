@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+$color_white : #fff;
+
+@mixin flexbox{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+@mixin flexbox1{
+    justify-content:20px;
+    align-items:20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+.container{
+    height: 100vh;
+    @include flexbox;
+    background-color: #6600cc;
+}
+
+.container{
+    @include flexbox1;
+    background-color: #6600cc;
+}
+
+
+.card{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    height: 45rem;
+    width: 35rem;
+    margin: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    // overflow: hidden;
+
+    &:hover img{
+        transform: scale(1.1);
+    }
+
+    & img{
+        width: 100%;
+        position: absolute;
+        filter:brightness(50%);
+        transition: 1s;
+        // box-shadow: 0px 0px 20px 10px #b2ffff;
+
+    }
+
+    & .layer{
+        text-align: center;
+        position: relative;
+        color: $color_white;
+        letter-spacing: 0.5rem;
+
+        & h1{
+            font-size: 2.5rem;
+            margin-top: 4rem;
+            font-family: Poppins;
+            
+        }
+
+        & p{
+            font-size: 1.5rem;
+            padding: 1.8rem 5rem;
+            font-family: Roboto;
+        }
+
+        & a{
+            text-decoration: none;
+            font-size: 1rem;
+            color: $color_white;
+            font-family: Poppins;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        & span{
+            font-size: 1.2rem;
+        } 
+    }
+}
+
